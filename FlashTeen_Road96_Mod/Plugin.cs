@@ -1,4 +1,4 @@
-﻿using BepInEx.Logging;
+using BepInEx.Logging;
 using BepInEx.Unity.IL2CPP;
 using BlueEyes.Entities;
 using HarmonyLib;
@@ -72,7 +72,8 @@ namespace FlashTeen_Road96_Mod
             // These are scenes that are logic but doesn't have a player object in which cause errors
             string[] bannedscene = {
                 "000_Game/Scenes/SONYA_4/SONYA_4_Logic",
-                "000_Game/Scenes/ALEX_1/ALEX_1_Logic"
+                "000_Game/Scenes/ALEX_1/ALEX_1_Logic",
+                "000_Game/Scenes/GEN_DRIVE_1/GEN_DRIVE_1_LOGIC"
             };
             // These are scenes that are also logic scenes but without the "_Logic" at the end of the name
             string[] logicscene = {
@@ -81,7 +82,10 @@ namespace FlashTeen_Road96_Mod
                     "000_Game/Scenes/BORDERS/BORDER_ZOE",
                     "000_Game/Scenes/BORDERS/BorderExit_Zoe/BORDEREXIT_ZOE",
                     "000_Game/Scenes/BORDERS/BorderExit_CreditGold/BorderExit_CreditGold",
-                    "000_Game/Scenes/SONYA_8/SONYA_8"
+                    "000_Game/Scenes/SONYA_8/SONYA_8",
+                    "000_Game/Scenes/BORDERS/BORDER_FINAL",
+                    "000_Game/Scenes/ZOE_1/ZOE_1",
+                    "000_Game/Scenes/ALEX_7/ALEX_7"
             };
             string[] tokens = null;
             bool islogicscene = false;
