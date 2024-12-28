@@ -85,20 +85,22 @@ namespace FlashTeen_Road96_Mod
                     "000_Game/Scenes/SONYA_8/SONYA_8",
                     "000_Game/Scenes/BORDERS/BORDER_FINAL",
                     "000_Game/Scenes/ZOE_1/ZOE_1",
-                    "000_Game/Scenes/ALEX_7/ALEX_7"
+                    "000_Game/Scenes/ALEX_7/ALEX_7",
+                    "000_Game/Scenes/FANNY_9/FANNY_9",
+                    "000_Game/Scenes/STANMITCH_9/STANMITCH_9"
             };
             string[] tokens = null;
             bool islogicscene = false;
 
             FlashTeenMod.playerobj = null;
-            FlashTeenMod.Log.LogMessage(sceneName);
+       //     FlashTeenMod.Log.LogMessage(sceneName);
             foreach(string i in bannedscene) {
                 if (sceneName == i) {
                     return;
                 }
             }
             if (sceneName.ToString().Contains("Logic") || sceneName.ToString().Contains("LOGIC")) {
-                FlashTeenMod.Log.LogMessage("Logic scene found!");
+           //     FlashTeenMod.Log.LogMessage("Logic scene found!");
                 tokens = sceneName.Split('/');
                 if (SceneManager.GetSceneByName(sceneName) != null) {
                     FlashTeenMod.scenename = tokens[3];
@@ -111,7 +113,7 @@ namespace FlashTeen_Road96_Mod
                     }
                 }
                 if (islogicscene) {
-                    FlashTeenMod.Log.LogMessage("Logic scene found!");
+               //     FlashTeenMod.Log.LogMessage("Logic scene found!");
                     tokens = sceneName.Split('/');
                     if (SceneManager.GetSceneByName(sceneName) != null) {
                         FlashTeenMod.scenename = tokens[3];
